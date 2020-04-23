@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -40,11 +42,13 @@ public class Investors implements Serializable{
     @Column(name = "disbursedLoans")
     private Integer disbursedLoans;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "activeStatus")
+    private ActiveStatus activeStatus;
+
     public static long getSerialversionuid() {
         return serialVersionUID;
     }
-
-   
 
     public String getInvestorName() {
         return investorName;
@@ -109,5 +113,14 @@ public class Investors implements Serializable{
     public void setInvestorID(Integer investorID) {
         this.investorID = investorID;
     }
+
+    public ActiveStatus getActiveStatus() {
+        return activeStatus;
+    }
+
+    public void setActiveStatus(ActiveStatus activeStatus) {
+        this.activeStatus = activeStatus;
+    }
+
 
 }

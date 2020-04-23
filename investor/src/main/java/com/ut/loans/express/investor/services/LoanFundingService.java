@@ -64,5 +64,4 @@ public class LoanFundingService {
         digitalDocumentService.generateDocument(investors.get(0).getInvestorID(),jsonFile.getLoanID(),jsonFile.getLoanAmount());
         return "Success";
     }
-
 }
