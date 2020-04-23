@@ -4,5 +4,9 @@ public enum LoanStatus {
     Funded,
     Disbursed,
     Repaid,
-    Failed
+    Failed,
+    AgreementAccepted,
+    AgreementRejected,
+    AgreementSent,
+    VAPaymentSuccess
 }

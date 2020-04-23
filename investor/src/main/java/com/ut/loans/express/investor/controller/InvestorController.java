@@ -1,7 +1,9 @@
 package com.ut.loans.express.investor.controller;
 
 import com.ut.loans.express.investor.dto.request.ApprovedLoanRecordDTO;
+import com.ut.loans.express.investor.dto.request.DisbursedLoansDTO;
 import com.ut.loans.express.investor.dto.request.FundLoanDTO;
+import com.ut.loans.express.investor.dto.request.InvestorVAPaymentRecordDTO;
 import com.ut.loans.express.investor.dto.request.JsonFile;
 import com.ut.loans.express.investor.services.InvestorDashboardService;
 import com.ut.loans.express.investor.services.LoanFundingService;
@@ -53,4 +55,10 @@ public class InvestorController {
         return new ResponseEntity<Object>(loanFundingService.fundLoan(jsonFile.getJSONFile()), HttpStatus.OK);
     }
 
+    @PostMapping(path = "/insertInvestorVAPaymentRecord",consumes="application/json")
+    public ResponseEntity<Object> insertDisbursedLoanRecord(@RequestBody JsonFile<InvestorVAPaymentRecordDTO> jsonFile){
+        System.out.println(jsonFile);
+        return new ResponseEntity<Object>(temporaryService.insertInvestorVAPaymentRecord(jsonFile.getJSONFile()), HttpStatus.OK);
+    }
+    
 }

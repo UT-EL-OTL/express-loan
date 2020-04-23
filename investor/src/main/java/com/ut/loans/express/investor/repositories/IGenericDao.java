@@ -22,6 +22,8 @@ public interface IGenericDao<T extends Serializable> {
    List<T> findAll();
 
    List<T> findValueByColumns(String Column1,String Value1,String Column2,String Value2,String Column3,String Value3);
+  
+   List<T> findValueByTwoColumns(String Column1,String Value1,String Column2,String Value2);
 
    void setClazz( Class< T > clazzToSet );
 

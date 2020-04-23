@@ -52,6 +52,12 @@ public abstract class AbstractJpaDao< T extends Serializable > {
                            "' and a."+Column3+"='"+Value3+"'").getResultList();
       return querylist;
    }
+   
+   public List<T> findValueByTwoColumns(String Column1,String Value1,String Column2,String Value2){
+      List<T> querylist = entityManager.createQuery("from "+clazz.getName()+" a where a."+Column1+"='"+Value1+
+                           "' and a."+Column2+"='"+Value2+"'").getResultList();
+      return querylist;
+   }
 
    public void save( T entity ){
       Session session = createSession().getSessionFactory().openSession();

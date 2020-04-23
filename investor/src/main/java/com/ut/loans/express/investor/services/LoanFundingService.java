@@ -60,5 +60,4 @@ public class LoanFundingService {
         investorFundedLoansDAO.save(investorFundedLoans);
         return "Success";
     }
-
 }
