@@ -23,6 +23,9 @@ public class LoanFundingService {
     IGenericDao<Investors> investorsDAO;
 
     @Autowired
+    DigitalDocumentService digitalDocumentService;
+
+    @Autowired
     public void setApprovedLoanDAO(IGenericDao<ApprovedLoans> approvedLoanDAO){
         this.approvedLoanDAO=approvedLoanDAO;
         this.approvedLoanDAO.setClazz(ApprovedLoans.class);
@@ -58,6 +61,7 @@ public class LoanFundingService {
         loan.setFundedAt(new Date());
         approvedLoanDAO.update(loan);
         investorFundedLoansDAO.save(investorFundedLoans);
+        digitalDocumentService.generateDocument(investors.get(0).getInvestorID(),jsonFile.getLoanID(),jsonFile.getLoanAmount());
         return "Success";
     }
 }
