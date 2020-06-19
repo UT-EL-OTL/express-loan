@@ -1,19 +1,19 @@
-package com.ut.loans.express.investor.services;
+package com.ut.loans.express.processing.services;
 
 import java.util.Random;
 
-import com.ut.loans.express.investor.dto.request.ApprovedLoanRecordDTO;
-import com.ut.loans.express.investor.dto.request.DisbursedLoansDTO;
-import com.ut.loans.express.investor.dto.request.InvestorVAPaymentRecordDTO;
-import com.ut.loans.express.investor.dto.response.BankAPIRequest;
-import com.ut.loans.express.investor.dto.response.BankAPIResponse;
-import com.ut.loans.express.investor.model.ApplicationStatus;
-import com.ut.loans.express.investor.model.ApprovedLoans;
-import com.ut.loans.express.investor.model.DisbursedLoans;
-import com.ut.loans.express.investor.model.EscrowAccountHistory;
-import com.ut.loans.express.investor.model.InvestorVAPayment;
-import com.ut.loans.express.investor.model.UTEscrowAccounts;
-import com.ut.loans.express.investor.repositories.IGenericDao;
+import com.ut.loans.express.processing.dto.request.ApprovedLoanRecordDTO;
+import com.ut.loans.express.processing.dto.request.DisbursedLoansDTO;
+import com.ut.loans.express.processing.dto.request.InvestorVAPaymentRecordDTO;
+import com.ut.loans.express.processing.dto.response.BankAPIRequest;
+import com.ut.loans.express.processing.dto.response.BankAPIResponse;
+import com.ut.loans.express.processing.model.ApplicationStatus;
+import com.ut.loans.express.processing.model.ApprovedLoans;
+import com.ut.loans.express.processing.model.DisbursedLoans;
+import com.ut.loans.express.processing.model.EscrowAccountHistory;
+import com.ut.loans.express.processing.model.InvestorVAPayment;
+import com.ut.loans.express.processing.model.UTEscrowAccounts;
+import com.ut.loans.express.processing.repositories.IGenericDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

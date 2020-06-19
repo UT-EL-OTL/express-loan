@@ -1,7 +1,7 @@
-package com.ut.loans.express.investor.controller;
+package com.ut.loans.express.processing.controller;
 
-import com.ut.loans.express.investor.dto.response.BankAPIRequest;
-import com.ut.loans.express.investor.services.TemporaryService;
+import com.ut.loans.express.processing.dto.response.BankAPIRequest;
+import com.ut.loans.express.processing.services.TemporaryService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.ut.loans.express.investor.services;
+package com.ut.loans.express.processing.services;
 
 import java.net.URI;
 import java.sql.Time;
@@ -8,20 +8,20 @@ import java.util.List;
 
 import javax.print.attribute.standard.DateTimeAtCompleted;
 
-import com.ut.loans.express.investor.dto.request.JsonFile;
-import com.ut.loans.express.investor.model.ActiveStatus;
-import com.ut.loans.express.investor.model.ApprovedLoans;
-import com.ut.loans.express.investor.model.DisbursedLoans;
-import com.ut.loans.express.investor.model.EscrowAccountHistory;
-import com.ut.loans.express.investor.model.InvestorBanks;
-import com.ut.loans.express.investor.model.InvestorFundedLoans;
-import com.ut.loans.express.investor.model.InvestorVAPayment;
-import com.ut.loans.express.investor.model.Investors;
-import com.ut.loans.express.investor.model.LoanStatus;
-import com.ut.loans.express.investor.model.PaymentStatus;
-import com.ut.loans.express.investor.model.TransactionTypes;
-import com.ut.loans.express.investor.model.UTEscrowAccounts;
-import com.ut.loans.express.investor.repositories.IGenericDao;
+import com.ut.loans.express.processing.dto.request.JsonFile;
+import com.ut.loans.express.processing.model.ActiveStatus;
+import com.ut.loans.express.processing.model.ApprovedLoans;
+import com.ut.loans.express.processing.model.DisbursedLoans;
+import com.ut.loans.express.processing.model.EscrowAccountHistory;
+import com.ut.loans.express.processing.model.InvestorBanks;
+import com.ut.loans.express.processing.model.InvestorFundedLoans;
+import com.ut.loans.express.processing.model.InvestorVAPayment;
+import com.ut.loans.express.processing.model.Investors;
+import com.ut.loans.express.processing.model.LoanStatus;
+import com.ut.loans.express.processing.model.PaymentStatus;
+import com.ut.loans.express.processing.model.TransactionTypes;
+import com.ut.loans.express.processing.model.UTEscrowAccounts;
+import com.ut.loans.express.processing.repositories.IGenericDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
@@ -36,7 +36,7 @@ import org.springframework.web.client.RestTemplate;
 import io.micrometer.core.instrument.util.TimeUtils;
 
 @Service
-public class InvestorPaymentServices {
+public class ApprovedLoansServices {
 
     IGenericDao<InvestorFundedLoans> investorFundedLoansDAO;
     IGenericDao<ApprovedLoans> approvedLoanDAO;
